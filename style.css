@@ -1,0 +1,49 @@
+/* Apply grid layout to menu. */
+.main-nav__menu {
+  display: grid;
+  grid-template-rows: 10rem 100px 100px;
+  grid-template-areas: "home home . . about . contact"
+    ". maps . . infographics . ."
+    ". . animations . . other ."
+}
+
+/* Apply grid-area to menu items */
+.main-nav__menu-item__home {
+  grid-area: home;
+ }
+ .main-nav__menu-item__contact {
+  grid-area: contact;
+ }
+ .main-nav__menu-item__maps {
+  grid-area: maps;
+ }
+ .main-nav__menu-item__info-graphics {
+  grid-area: infographics;
+ }
+ .main-nav__menu-item__animations {
+  grid-area: animations;
+ }
+ .main-nav__menu-item__other {
+  grid-area: other;
+ }
+ .main-nav__menu-item__about {
+  grid-area: about;
+ }
+
+ /* Apply styles to menu items */
+ .main-nav__menu-item {
+  display: grid;
+ }
+
+ /* Apply styles to menu item links */
+ .main-nav__menu-item-link {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+ }
+
+.main-nav__menu-item-link__home {
+  background-color: #ff0000;
+ }
+
+ 
