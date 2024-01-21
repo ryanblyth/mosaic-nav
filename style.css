@@ -1,10 +1,17 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 /* Apply grid layout to menu. */
 .main-nav__menu {
   display: grid;
-  grid-template-rows: 10rem 100px 100px;
-  grid-template-areas: "home home . . about . contact"
-    ". maps . . infographics . ."
-    ". . animations . . other ."
+  grid-template-rows: 42px 18px 25px 50px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 1px;
+  grid-template-areas: "home home tile1 tile1 tile1 tile1 animations animations about about contact contact"
+    "maps maps maps infographics infographics infographics animations animations tile2 tile2 tile2 tile2"
+    "maps maps maps infographics infographics infographics animations animations other other other other"
+    "maps maps maps infographics infographics infographics animations animations other other other other"
 }
 
 /* Apply grid-area to menu items */
@@ -43,7 +50,35 @@
  }
 
 .main-nav__menu-item-link__home {
-  background-color: #ff0000;
+  background-color: #000000;
+ }
+ .main-nav__menu-item-link__maps {
+  background-color: #333333;
+ }
+ .main-nav__menu-item__info-graphics {
+  background-color: #222222;
+ }
+ .main-nav__menu-item-link__animations {
+  background-color: #444444;
+ }
+ .main-nav__menu-item-link__other {
+  background-color: #555555;
+ }
+ .main-nav__menu-item-link__about {
+  background-color: #666666;
+ }
+ .main-nav__menu-item-link__contact {
+  background-color: #777777;
  }
 
- 
+ /* Apply styles to menu psuedo elements (grid direct child) */
+ .main-nav__menu::before {
+  content: "";
+  grid-area: tile1;
+  background-color: #111111;
+}
+.main-nav__menu::after {
+  content: "";
+  grid-area: tile2;
+  background-color: #111111;
+}
