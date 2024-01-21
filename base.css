@@ -14,7 +14,7 @@ body {
 
 /* Set core root defaults */
 html {
-  font-size: 100%; /* Respect user's browser font-size settings */
+  font-size: 16px;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
